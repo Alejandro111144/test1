@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javidev - Career Roadmaps in Tech</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body,
+    html {
+      padding-bottom: 0%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 200%);
+    }
+
+    #app {
+      position: relative;
+      height: 100%;
+      font-family: "Montserrat", serif;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      #app {
+      height: auto;
+      padding: 16px;
+      
+      }
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      color: black;
+      text-transform: uppercase;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+      line-height: 130%;
+      user-select: none;
+      z-index: 7;
+      size: 700cm;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      color: #333;
+      line-height: 1.5;
+      padding-top: 5%;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #webgl-canvas {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 1;
+      dis
+    }
+   
+
+    @media (max-width: 480px) {
+      #webgl-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        z-index: -1;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+        padding-top: 30%;
+      }
+
+     
+    }
+    
+
+    .buttons {
+      color: #636363;
+      position: absolute;
+      top: 5%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      display: flex;
+      background: rgba(0, 0, 0, 0.014);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.014);
+      padding: 10px 16px;
+      gap: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      color: #ffffff;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      box-shadow: 0 6px 12px rgba(106, 17, 203, 0.6);
+    }
+
+    button:active {
+      color: #ffffff;
+      transform: scale(0.95);
+      box-shadow: none;
+    }
+
+    .animated-btn {
+      color: #636363;
+      position: absolute;
+      top: 5%;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      display: flex;
+      background: rgba(0, 0, 0, 0.014);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.014);
+      padding: 10px 16px;
+      gap: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .animated-btn:hover {
+      color: #ffffff;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      box-shadow: 0 6px 12px rgba(106, 17, 203, 0.6);
+    }
+
+    .animated-btn-me {
+      color: #636363;
+      position: absolute;
+      top: 11%;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      display: flex;
+      background: rgba(0, 0, 0, 0.014);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.014);
+      padding: 10px 16px;
+      gap: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .animated-btn-me:hover {
+      color: #ffffff;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      box-shadow: 0 6px 12px rgba(106, 17, 203, 0.6);
+    }
+
+    .py-30 {
+      color: #636363;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      display: grid;
+      background: rgba(0, 0, 0, 0.014);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.014);
+      padding: 10px 16px;
+      gap: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-main-box {
+      width:fit-content;
+      margin: 0 auto;
+      padding: 16px;
+      z-index: 30;
+    }
+
+    .two-column-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .hero-title {
+        font-size: 4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .py-30 {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 16px 12px;
+        flex-direction: column;
+        size: 30px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .hero-main-box {
+        max-width: 400%;
+        margin: 0 auto;
+        padding: 16px;
+        z-index: 30;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .py-30 {
+        padding: 12px 8px;
+        gap: 8px;
+        font-size: 14px;
+        size: 30px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .buttons {
+        top:1%;
+      left: 85%;
+      
+      transform: translateX(-50%);
+      flex-direction: row;
+      padding: 8px;
+      max-height:70px;
+      
+      }
+
+      .animated-btn {
+        top:5%;
+      left: 40%;
+      
+      transform: translateX(-10%);
+      flex-direction: column;
+      padding: 8px;
+      max-height:40px;
+      }
+      .animated-btn-me {
+        top:5%;
+      left: 10%;
+      
+      transform: translateX(-10%);
+      flex-direction: column;
+      padding: 8px;
+      max-height:40px;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-main-box {
+        width: 40;
+        margin: 0 auto;
+        padding: 16px;
+        z-index: 30;
+      }
+      
+    }
+
+   
+
+      .hero-title {
+        font-size: 2rem;
+        padding-top: 10%;
+      }
+
+
+      .column {
+        padding: 10px;
+      }
+
+      .two-column-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+
+    body2 {
+      position: relative;
+      z-index: 7;
+    }
+
+    .about-contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 20px;
+    }
+
+    .about-section,
+    .contact-section {
+      flex: 1;
+      margin: 0 10px;
+      padding: 20px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .about-section h2,
+    .contact-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .about-section p,
+    .contact-section p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    #resources-section {
+      scroll-margin-top: 20px;
+    }
+    
+    
+  </style>
+
+
+</head>
+ 
+
+
+
+
+<div id="app">
+  <!-- Hero Section -->
+  <div>
+    <h1 class="hero-title">
+      Find the best resources and <br>
+      tools to level up your skills
+    </h1>
+  </div>
+
+  <!-- Animated Button "Resources" -->
+  <a id="scroll-to-resources" class="animated-btn" href="#resources-section">
+    Resources
+  </a>
+
+  <!-- Animated Button "About Me" -->
+  <a id="about-me-link" class="animated-btn-me" href="http://javidev.site/about-me/" target="_blank">
+    About Me
+  </a>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button id="gravity-btn">Toggle Gravity</button>
+    <button id="colors-btn">Change Colors</button>
+  </div>
+
+  <!-- WebGL Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <section class="cards">
+    <a class="card back animated" href="https://drive.google.com/file/d/1t2ZIyyYkz_cjxx_dZMVcEk0FXsBTHV36/view?usp=drive_link" target="_blank">
+      <p style="color: white; font-weight: bold; text-align: center; position: absolute; bottom: 10px; left: 0; right: 0; background-color: #2575fc; border-radius: 20%; margin: 0; padding: 5px; font-size: 12px;">
+        Frontend Developer
+      </p>
+    </a>
+    
+    <a class="card charizard animated" href="https://drive.google.com/file/d/1rsn5k_d0JkKWVhdrw6Ohh5QNuqHGuH1f/view?usp=drive_link" target="_blank">
+      <p style="color: white; font-weight: bold; text-align: center; position: absolute; bottom: 10px; left: 0; right: 0; background-color: #2575fc; border-radius: 20%; margin: 0; padding: 5px; font-size: 12px;">
+        Backend Developer
+      </p>
+    </a>
+    
+    <a class="card pika animated" href="https://drive.google.com/file/d/1T80MXlhzkidB8HiqUku-vtNA1XAOokKS/view?usp=drive_link" target="_blank">
+      <p style="color: white; font-weight: bold; text-align: center; position: absolute; bottom: 10px; left: 0; right: 0; background-color: #2575fc; border-radius: 20%; margin: 0; padding: 5px; font-size: 12px;">
+        DevOps Engineer
+      </p>
+    </a>
+    
+    <a class="card eevee animated" href="https://drive.google.com/file/d/1WCeXZ7pPf62QmMthMQLzcuhbO4FJXUTb/view?usp=drive_link" target="_blank">
+      <p style="color: white; font-weight: bold; text-align: center; position: absolute; bottom: 10px; left: 0; right: 0; background-color: #2575fc; border-radius: 20%; margin: 0; padding: 5px; font-size: 12px;">
+        Full-Stack Developer
+      </p>
+    </a>
+    
+    <a class="card mewtwo animated" href="https://drive.google.com/file/d/1Wk8qStgnlt2Q3ve5Gu32D2YvA55iMta1/view?usp=drive_link" target="_blank">
+      <p style="color: white; font-weight: bold; text-align: center; position: absolute; bottom: 10px; left: 0; right: 0; background-color: #2575fc; border-radius: 20%; margin: 0; padding: 5px; font-size: 12px;">
+        Software Architect
+      </p>
+    </a>
+
+    
+    
+    
+  </section>
+</div>
+
+
+
+
+  <script type="module">
+    import { Spheres1Background } from 'https://cdn.jsdelivr.net/npm/threejs-components@0.0.5/build/backgrounds/spheres1.cdn.min.js';
+
+    const bg = Spheres1Background(document.getElementById('webgl-canvas'), {
+      count: 200,
+      minSize: 0.3,
+      maxSize: 1,
+      gravity: 0.5
+    });
+
+    // Button to Toggle Gravity
+    document.getElementById('gravity-btn').addEventListener('click', () => {
+      bg.spheres.config.gravity = bg.spheres.config.gravity === 0 ? 1 : 0;
+    });
+
+    // Button to Change Background Colors
+    document.getElementById('colors-btn').addEventListener('click', () => {
+      bg.spheres.setColors([0xffffff * Math.random(), 0xffffff * Math.random(), 0xffffff * Math.random()]);
+    });
+  </script>
+<script>
+  // Agregar funcionalidad de scroll al botón
+  document.getElementById("scroll-to-roadmaps").addEventListener("click", function () {
+    document.querySelector(".roadmaps-section").scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+
+<body2 class="bg-repeat text-gray-900" >
+  
+ 
+
+<!-- Resources Page -->
+<section >
+  <div class="container mx-auto px-4" id="resources-section">
+    <h2  class="text-3xl font-bold text-center mb-12 sticky-header">Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <a href="https://youtube.com/playlist?list=PLSDeUiTMfxW6VChKWb26Z_mPR4f6fAmMV&si=_VVDEcFfPL7qutNP" target="_blank" style="display: block; text-decoration: none;">
+        <div class="bg-white shadow-md rounded-lg p-6 flex flex-col" style="min-height: 130px;">
+          <h3 class="text-xl font-bold mb-2">Video Tutorials</h3>
+          <p class="text-gray-700 flex-grow">Watch and learn from industry experts.</p>
+        </div>
+      </a>
+      <a href="https://devmountain.com/blog/7-highly-recommended-programming-books/" target="_blank" style="display: block; text-decoration: none;">
+        <div class="bg-white shadow-md rounded-lg p-6 flex flex-col" style="min-height: 130px;">
+          <h3 class="text-xl font-bold mb-2">Recommended Books</h3>
+          <p class="text-gray-700 flex-grow">Read books that will enhance your knowledge and skills.</p>
+        </div>
+      </a>
+      <a href="https://blog.fabrichq.ai/latest-ai-code-generators-a-comprehensive-list-b7ce1a461fac" target="_blank" style="display: block; text-decoration: none;">
+        <div class="bg-white shadow-md rounded-lg p-6 flex flex-col" style="min-height: 130px;">
+          <h3 class="text-xl font-bold mb-2">AI Tools</h3>
+          <p class="text-gray-700 flex-grow">Discover the best AI-powered tools to supercharge your development process.</p>
+        </div>
+      </a>
+      <a href="https://dev.to/rubanginosingh/10-essential-tools-every-developer-should-know-about-1f4f" target="_blank" style="display: block; text-decoration: none;">
+        <div class="bg-white shadow-md rounded-lg p-6 flex flex-col" style="min-height: 130px;">
+          <h3 class="text-xl font-bold mb-2">Essential Tools</h3>
+          <p class="text-gray-700 flex-grow">Discover the tools that professionals use daily.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+ <!-- Contenedor para About y Contact -->
+ <div class="container mx-auto p-8">
+  <div class="two-column-row">
+    <!-- About Section -->
+    <div class="column">
+      <h2 class="text-2xl font-bold mb-4">About Me</h2>
+      <p>Hi, I’m Javier, a passionate developer committed to simplifying learning and helping others achieve their goals. With Javidev, my mission is to provide you with the most useful and up-to-date resources to excel in the development world. Let’s build the future together!
+      </br>
+    </br>
+        If you’d like further tweaks or additions, let me know! 😊</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="column">
+      <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200" />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"></textarea>
+        </div>
+        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <!-- road maps styles-->
+
+
+<style >
+
+:root {
+  --color1: rgb(0, 231, 255);
+  --color2: rgb(255, 0, 231);
+  --back: url(img/card1.jpg);
+  --charizard1: #fac;
+  --charizard2: #ddccaa;
+  --charizardfront: url(img/card2.jpg);
+  --pika1: #54a29e;
+  --pika2: #a79d66;
+  --pikafront: url(img/card3.jpg);
+  --eevee1: #efb2fb;
+  --eevee2: #acc6f8;
+  --eeveefront: url(img/card4.jpg);
+  --mewtwo1: #efb2fb;
+  --mewtwo2: #acc6f8;
+  --mewtwofront: url(img/card5.jpg);
+}
+
+
+.card {
+  width: 50vw;
+  height: 70vw;
+    // width: clamp(200px, 61vh, 18vw);
+    // height: clamp(280px, 85vh, 25.2vw);
+  @media screen and (min-width: 600px) {
+    // width: 61vh;
+    // height: 85vh;
+    // max-width: 500px;
+    // max-height: 700px;
+    width: clamp(12.9vw, 61vh, 18vw);
+    height: clamp(18vw, 85vh, 25.2vw);
+  }
+  
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  overflow: hidden;
+  z-index: 10;
+  touch-action: none;
+  
+  border-radius: 5% / 3.5%;
+  box-shadow: 
+    -5px -5px 5px -5px var(--color1), 
+    5px 5px 5px -5px var(--color2), 
+    -7px -7px 10px -5px transparent, 
+    7px 7px 10px -5px transparent, 
+    0 0 5px 0px rgba(255,255,255,0),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  
+  background-color: #040712;
+  background-image: var(--front);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform-origin: center;
+  
+}
+
+.card:hover {
+  box-shadow: 
+    -20px -20px 30px -25px var(--color1), 
+    20px 20px 30px -25px var(--color2), 
+    -7px -7px 10px -5px var(--color1), 
+    7px 7px 10px -5px var(--color2), 
+    0 0 13px 4px rgba(255,255,255,0.3),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+}
+
+.card.charizard {
+  --color1: var(--charizard1);
+  --color2: var(--charizard2);
+  --front: var(--charizardfront);
+}
+.card.pika {
+  --color1: var(--pika1);
+  --color2: var(--pika2);
+  --front: var(--pikafront);
+}
+.card.mewtwo {
+  --color1: var(--mewtwo1);
+  --color2: var(--mewtwo2);
+  --front: var(--mewtwofront);
+}
+.card.eevee {
+  --color1: #ec9bb6;
+  --color2: #ccac6f;
+  --color3: #69e4a5;
+  --color4: #8ec5d6;
+  --color5: #b98cce;
+  --front: var(--eeveefront);
+}
+.card.back {
+  --color1: #ec9bb6;
+  --color2: #ccac6f;
+  --color3: #69e4a5;
+  --color4: #8ec5d6;
+  --color5: #b98cce;
+  --front: var(--back);
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: .5;
+  mix-blend-mode: color-dodge;
+  transition: all .33s ease;
+}
+
+.card:before {
+  background-position: 50% 50%;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    var(--color1) 25%,
+    transparent 47%,
+    transparent 53%,
+    var(--color2) 75%,
+    transparent 100%
+  );
+  opacity: .5;
+  filter: brightness(.5) contrast(1);
+  z-index: 1;
+}
+
+.card:after {
+  opacity: 1;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif"), 
+    url(https://assets.codepen.io/13471/holo.png), 
+    linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
+  background-position: 50% 50%;
+  background-size: 160%;
+  background-blend-mode: overlay;
+  z-index: 2;
+  filter: brightness(1) contrast(1);
+  transition: all .33s ease;
+  mix-blend-mode: color-dodge;
+  opacity: .75;
+}
+
+.card.active:after,
+.card:hover:after {
+  filter: brightness(1) contrast(1);;
+  opacity: 1;
+}
+
+.card.active,
+.card:hover {
+  animation: none;
+  transition: box-shadow 0.1s ease-out;
+}
+
+.card.active:before,
+.card:hover:before {
+  animation: none;
+  background-image: linear-gradient(
+    110deg,
+    transparent 25%,
+    var(--color1) 48%,
+    var(--color2) 52%,
+    transparent 75%
+  );
+  background-position: 50% 50%;
+  background-size: 250% 250%;
+  opacity: .88;
+  filter: brightness(.66) contrast(1.33);
+  transition: none;
+}
+
+.card.active:before,
+.card:hover:before,
+.card.active:after,
+.card:hover:after {
+  animation: none;
+  transition: none;
+}
+
+.card.animated {
+  transition: none;
+  animation: holoCard 12s ease 0s 1;
+  &:before { 
+    transition: none;
+    animation: holoGradient 12s ease 0s 1;
+  }
+  &:after {
+    transition: none;
+    animation: holoSparkle 12s ease 0s 1;
+  }
+}
+
+
+
+
+@keyframes holoSparkle {
+  0%, 100% {
+    opacity: .75; background-position: 50% 50%; filter: brightness(1.2) contrast(1.25);
+  }
+  5%, 8% {
+    opacity: 1; background-position: 40% 40%; filter: brightness(.8) contrast(1.2);
+  }
+  13%, 16% {
+    opacity: .5; background-position: 50% 50%; filter: brightness(1.2) contrast(.8);
+  }
+  35%, 38% {
+    opacity: 1; background-position: 60% 60%; filter: brightness(1) contrast(1);
+  }
+  55% {
+    opacity: .33; background-position: 45% 45%; filter: brightness(1.2) contrast(1.25);
+  }
+}
+
+@keyframes holoGradient {
+  0%, 100% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(.5) contrast(1);
+  }
+  5%, 9% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(.75) contrast(1.25);
+  }
+  13%, 17% {
+    background-position: 0% 0%;
+    opacity: .88;
+  }
+  35%, 39% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(.5) contrast(1);
+  }
+  55% {
+    background-position: 0% 0%;
+    opacity: 1;
+    filter: brightness(.75) contrast(1.25);
+  }
+}
+
+@keyframes holoCard {
+  0%, 100% {
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+  }
+  5%, 8% {
+    transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
+  }
+  13%, 16% {
+    transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
+  }
+  35%, 38% {
+    transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
+  }
+  55% {
+    transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
+  }
+}
+
+
+
+.card.eevee:hover {
+  box-shadow: 
+    0 0 30px -5px white,
+    0 0 10px -2px white,
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+}
+.card.eevee:hover:before,
+.card.eevee.active:before {
+  background-image: linear-gradient(
+    115deg,
+    transparent 20%,
+    var(--color1) 36%,
+    var(--color2) 43%,
+    var(--color3) 50%,
+    var(--color4) 57%,
+    var(--color5) 64%,
+    transparent 80%
+  );
+}
+
+
+
+
+.demo .card {
+  background-image: var(--back);
+  font-size: 2vh
+}
+.demo .card > span {
+  position: relative;
+  top: 45%;
+}
+
+.demo .card:nth-of-type(1),
+.demo .card:nth-of-type(2),
+.demo .card:nth-of-type(3) {
+  width: 20vh;
+  height: 27.5vh;
+  box-shadow: inset 0 0 0 1px rgba(white,0.4), 0 25px 15px -10px rgba(0, 0, 0, 0.5);
+  animation: none;
+}
+
+.demo .card:nth-of-type(1),
+.demo .card:nth-of-type(2),
+.demo .card:nth-of-type(3) {
+  &:before, &:after {
+    animation: none;
+    // opacity: 1;
+  } 
+}
+.demo .card:nth-of-type(1) {
+  &:before, &:after { display: none; }
+}
+.demo .card:nth-of-type(2) {
+  background: none;
+  &:before { display: none; }
+}
+.demo .card:nth-of-type(3) {
+  background: none;
+  &:after { display: none; }
+}
+
+.operator {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 6vh;
+}
+
+
+.demo,
+.cards { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  perspective: 2000px;
+  position: relative;
+  z-index: 1;
+  transform: translate3d(0.1px, 0.1px, 0.1px )
+}
+.demo {
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+
+
+.cards .card {
+  &:nth-child(2) {
+    &, &:before, &:after {
+      animation-delay: 0.25s;
+    }
+  }
+  &:nth-child(3) {
+    &, &:before, &:after {
+      animation-delay: 0.5s;
+    }
+  }
+  &:nth-child(4) {
+    &, &:before, &:after {
+      animation-delay: 0.75s;
+    }
+  }
+}
+
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-400 text-xsm py-4">
+  <div class="container mx-auto px-4 text-center">
+    <div class="flex justify-center space-x-6 mt-4">
+      <a href="https://www.instagram.com/javidev.site/" target="_blank" class="text-gray-400 hover:text-white text-2xl">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/@javidev" target="_blank" class="text-gray-400 hover:text-white text-2xl">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61568612923739" target="_blank" class="text-gray-400 hover:text-white text-2xl">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://x.com/javidevsite" target="_blank" class="text-gray-400 hover:text-white text-2xl">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.tiktok.com/@javidev.site" target="_blank" class="text-gray-400 hover:text-white text-2xl">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+    <p class="text-white-800 mt-4">
+      Web site created By: © 2023 Javier Alejandro Castillo - javidev.
+    </p>
+    <p>
+      This site uses the Spheres1Background component from Three.js by Kevin Levron (@soju22).
+    </p>
+  </div>
+</footer>
+
+</body2>
+</html>
